@@ -1,0 +1,10 @@
+<!-- app.component.html -->
+<div style="padding: 20px;">
+  <nz-card nzTitle="Fábrica de Willy Wonka">
+    <p>Mensaje del padre: {{ parentMessage }}</p>
+    <app-child [message]="parentMessage" (messageEvent)="receiveMessage($event)">
+      <div #projectedContent>Contenido proyectado desde el padre</div>
+    </app-child>
+    <p>Mensaje del hijo: {{ childMessage }}</p>
+  </nz-card>
+</div>
